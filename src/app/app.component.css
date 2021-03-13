@@ -1,6 +1,7 @@
 .header {
   background-color: #383838;
-  height: 110px;
+  height: 105px;
+  color: white;
   padding: 20px;
 }
 img {
@@ -11,17 +12,12 @@ img {
 }
 .Title {
   margin-top: 35px;
-  color: white;
-  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-family: "Fredoka One";
   font-size: 40px;
-  font-weight: bolder;
 }
-
 #Subtitle {
   margin-top: 5px;
-
   padding-bottom: 20px;
-  color: white;
 }
 .line {
   vertical-align: middle;
@@ -32,19 +28,9 @@ img {
   padding-bottom: 5px;
   color: white;
 }
-.content {
-  font-family: "Fredoka One";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
 
-.h1 {
+.Forms
+{
   margin-top: 20px;
-  margin-left: 20px;
-  font-size: 20px;
-  font-weight: bolder;
-}
-.h2 {
-  margin-left: 10px;
+  margin-left: 50px;
 }
