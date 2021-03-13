@@ -12,9 +12,8 @@ img {
 .Title {
   margin-top: 35px;
   color: white;
-  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-family: "Fredoka One";
   font-size: 40px;
-  font-weight: bolder;
 }
 
 #Subtitle {
@@ -33,7 +32,7 @@ img {
   color: white;
 }
 .content {
-  font-family: "Fredoka One";
+
   font-style: normal;
   font-weight: 400;
   font-display: swap;
