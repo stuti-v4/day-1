@@ -1,8 +1,9 @@
 .header {
   background-color: #383838;
-  height: 105px;
+  height: 120px;
   color: white;
-  padding: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
 }
 img {
   margin-top: 2px;
@@ -11,26 +12,40 @@ img {
   margin-bottom: 5px;
 }
 .Title {
-  margin-top: 35px;
+  padding-top: 10px;
   font-family: "Fredoka One";
   font-size: 40px;
 }
-#Subtitle {
-  margin-top: 5px;
-  padding-bottom: 20px;
-}
 .line {
   vertical-align: middle;
-  height: 20px;
+  height: 28px;
   background-color: #9e6df7;
   text-align: right;
   padding-right: 10px;
   padding-bottom: 5px;
   color: white;
 }
-
-.Forms
+.form
 {
-  margin-top: 20px;
-  margin-left: 50px;
+  margin-left: 30%;
+}
+.form-control
+{
+  width: min-content;
+}
+
+.User
+{
+  font-size: 25px;
+  margin: 10px;
+}
+
+.btn-primary1
+{
+  background-color:#383838 ;
+}
+
+.btn-primary2
+{
+  background-color:#9e6df7 ;
 }
