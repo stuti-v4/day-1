@@ -13,12 +13,12 @@ export class AppComponent  {
   {
     this.ngHome=true;
     this.ngUser=false;
-    console.log('Homee');
+    console.log('Home');
   }
   User()
   {
     this.ngUser=true;
     this.ngHome=false;
-    console.log('Userr');
+    console.log('AddUser');
   }
 }
