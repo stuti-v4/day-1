@@ -7,9 +7,18 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular ' + VERSION.major;
+  ngHome=true;
+  ngUser=false;
   Home()
   {
+    this.ngHome=true;
+    this.ngUser=false;
     console.log('Homee');
   }
-  
+  User()
+  {
+    this.ngUser=true;
+    this.ngHome=false;
+    console.log('Userr');
+  }
 }
