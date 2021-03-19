@@ -12,8 +12,8 @@
 <div class="line">
     <ul>
       <div class="new">
-      <li><a (click)="Home()">HOME</a></li>
-      <li><a (click)="User()">+ADD USER</a></li>
+      <li><a (click)="isUserVisible=false">HOME</a></li>
+      <li><a (click)="isUserVisible=true">+ADD USER</a></li>
       </div>
       <li class="LOGO">
       <img src="https://trello-attachments.s3.amazonaws.com/6048607c61de5b708f69ce86/6048607c61de5b708f69ce91/x/20b01d0aea8268981a84c57b46c55355/nipsol_favicon.png">
@@ -23,7 +23,7 @@
       </li>
   </ul>
 </div>
-<div *ngIf="ngHome" class="home">
+<div *ngIf="!isUserVisible" class="home">
   <div class="h1">
     Salient Features Of Nipsol
   </div>
@@ -40,7 +40,7 @@
    5. Currently Nipsol has marked its presence in over 50 Restaurants/Cafes across 50 cities witin a span of 8 weeks since its launch.
   </div>
 </div>
-<div *ngIf="ngUser" class="user">
+<div *ngIf="isUserVisible" class="user">
   <div class="Use">
     <strong>User Registration</strong>
   </div>
