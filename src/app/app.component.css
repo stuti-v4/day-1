@@ -87,3 +87,7 @@ ul li.logo
 {
   background-color:#9e6df7 ;
 }
+.custom-control-input:checked ~ .custom-control-label::before {
+  border-color: black;
+  background-color: #9e6df7;
+}
