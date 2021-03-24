@@ -12,8 +12,8 @@
 <div class="line">
     <ul>
       <div class="new">
-      <li><a (click)="isUserVisible=false">HOME</a></li>
-      <li><a (click)="isUserVisible=true">+ADD USER</a></li>
+      <li><a (click)="isUserVisible=false" [ngStyle]="{'color': isUserVisible? 'Black' : 'white' }" >HOME</a></li>
+      <li><a (click)="isUserVisible=true" [ngStyle]="{'color': isUserVisible? 'white' : 'black' }" >+ADD USER</a></li>
       </div>
       <li class=logo>
       <img src="https://trello-attachments.s3.amazonaws.com/6048607c61de5b708f69ce86/6048607c61de5b708f69ce91/x/20b01d0aea8268981a84c57b46c55355/nipsol_favicon.png">
