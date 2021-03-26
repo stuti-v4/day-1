@@ -1,5 +1,5 @@
 import { Component, VERSION } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'my-app',
@@ -14,4 +14,12 @@ export class AppComponent  {
   {
     this.userName=currname.target.value;
   }
+
+  profileForm = new FormGroup({
+    name: new FormControl(''),
+    email: new FormControl(''),
+    phone: new FormControl(''),
+    address: new FormControl(''),
+    gender: new FormControl('')
+  });
 }
