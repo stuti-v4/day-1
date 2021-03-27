@@ -29,16 +29,7 @@ img {
   font-display: swap;
 }
 
-.h1 {
-  margin-top: 20px;
-  margin-left: 20px;
-  font-size: 20px;
-  font-weight: bolder;
-}
-.h2 {
-  margin-left: 10px;
-  font-size: 20px;
-}
+
 ul{
   list-style: none;
   display: flex;
@@ -62,32 +53,4 @@ ul li.logo
   display: inline-flex;
   padding-right: 12px;
   text-align: right;
-}
-.form
-{
-  margin-left: 30%;
-}
-.form-control
-{
-  width: min-content;
-}
-
-.Use
-{
-  font-size: 25px;
-  margin: 10px;
-}
-
-.btn-primary1
-{
-  background-color:#383838 ;
-}
-
-.btn-primary2
-{
-  background-color:#9e6df7 ;
-}
-.custom-control-input:checked ~ .custom-control-label::before {
-  border-color: black;
-  background-color: #9e6df7;
 }
