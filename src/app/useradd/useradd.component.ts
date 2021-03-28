@@ -14,7 +14,13 @@ export class UseraddComponent implements OnInit {
 
   constructor() { }
   nameOfUser = "";
-  ngOnInit(): void {
-  }
+  ngOnInit(): void 
+  {}
   
+   profileForm = new FormGroup({
+    inputName: new FormControl(''),
+    inputPhone: new FormControl(''),
+    inputAddress: new FormControl(''),
+    inputEmail: new FormControl('')
+  });
 }
