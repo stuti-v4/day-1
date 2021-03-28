@@ -1,5 +1,4 @@
 import { Component, VERSION } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
 import {Router} from '@angular/router';
 
 @Component({
