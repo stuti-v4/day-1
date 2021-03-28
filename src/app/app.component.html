@@ -14,6 +14,10 @@
       <div class="new">
       <li [ngClass]="{'active': (router.url === '/home') || router.url === '/'}">
         <a routerLink="/home">Home</a></li>
+        <li [ngClass]="{'active': (router.url === '/useradd') || router.url === '/'}">
+        <a routerLink="/useradd">+Add User</a></li>
+        <li [ngClass]="{'active': (router.url === '/showuser') || router.url === '/'}">
+        <a routerLink="/showuser">All User</a></li>
       </div>
       <li class=logo>
       <img src="https://trello-attachments.s3.amazonaws.com/6048607c61de5b708f69ce86/6048607c61de5b708f69ce91/x/20b01d0aea8268981a84c57b46c55355/nipsol_favicon.png">
@@ -24,4 +28,4 @@
   </ul>
 </div>
 
-
+<router-outlet></router-outlet>
