@@ -10,21 +10,7 @@ import {Router} from '@angular/router';
 export class AppComponent  {
   
   name = 'Angular ' + VERSION.major;
-  isUserVisible=false;
-  userName='';
   constructor(public router: Router) {
   }
   
-  displayName(currname)
-  {
-    this.userName=currname.target.value;
-  }
-
-  profileForm = new FormGroup({
-    name: new FormControl(''),
-    email: new FormControl(''),
-    phone: new FormControl(''),
-    address: new FormControl(''),
-    gender: new FormControl('')
-  });
 }

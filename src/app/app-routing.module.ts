@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {HomeComponent} from './home/HomeComponent';
+import { HomeComponent } from './home/home.component';
+import { UseraddComponent } from './useradd/useradd.component';
 
 const routes: Routes=[
-  {path: '', component: HomeComponent},
-  {path: 'home', component: HomeComponent}
+  {
+    path: 'home',
+    component:HomeComponent
+  },
+  {
+    path:'useradd',
+    component:UseraddComponent
+  }
 ];
 
 @NgModule({
@@ -13,4 +20,4 @@ const routes: Routes=[
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [HomeComponent];
+export const routingComponents = [HomeComponent,UseraddComponent,];
