@@ -11,7 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 })
 
 export class UseraddComponent implements OnInit {
-
+  
   constructor() { }
   nameOfUser = "";
   ngOnInit(): void 
@@ -24,3 +24,7 @@ export class UseraddComponent implements OnInit {
     inputEmail: new FormControl('')
   });
 }
+imports: [
+        FormsModule,
+        ReactiveFormsModule
+]
