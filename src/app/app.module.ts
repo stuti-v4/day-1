@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 import { FormGroup, FormControl } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -12,10 +12,11 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { UsersService } from './users.service';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, AppRoutingModule],
+  imports:      [ BrowserModule, FormsModule, AppRoutingModule,  FormsModule, ReactiveFormsModule],
   declarations: [ AppComponent, HelloComponent, HomeComponent, UseraddComponent, ShowuserComponent ,routingComponents],
   providers: [UsersService],
   bootstrap:    [ AppComponent ]
 })
+
 export class AppModule { 
 }
