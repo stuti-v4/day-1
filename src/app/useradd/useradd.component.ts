@@ -1,5 +1,5 @@
 import { Component,VERSION, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators} from '@angular/forms';
+import { FormGroup, FormControl, Validators,FormBuilder} from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -13,27 +13,51 @@ import { UsersService } from '../users.service';
 
 export class UseraddComponent implements OnInit {
   
-  constructor( private userService :UsersService) { }
+  profileForm:FormGroup;
+  constructor( private fb:FormBuilder,private userService :UsersService) { }
   nameOfUser = "";
-  user:any={};
+  isSubmitted: boolean;
+  userArray:any={};
   ngOnInit(): void 
-  {}
-  
-   profileForm = new FormGroup({
-    inputName: new FormControl,
-    inputEmail: new FormControl("", Validators.required),
-    inputPhone: new FormControl("", [
-      Validators.required,
-      Validators.pattern("[0-9 ]{10}")
-    ]),
-    inputAddress: new FormControl
-  });
+  {
+    this.createprofileForm();
+  }
+  createprofileForm()
+  {
+    this.profileForm=this.fb.group({
+      inputName:[null,Validators.required],
+      inputPhone:[null,[Validators.required,Validators.maxLength(10)]],
+      inputEmail:[null,[Validators.required,Validators.email]],
+      inputAddress:[null,Validators.required],
 
+    })
+  }
+  get inputName()
+  {
+    return this.profileForm.get('inputName') as FormControl;
+  }
+  get inputPhone()
+  {
+    return this.profileForm.get('inputPhone') as FormControl;
+  }
+  get inputEmail()
+  {
+    return this.profileForm.get('inputEmail') as FormControl;
+  }
+  get inputAddress()
+  {
+    return this.profileForm.get('inputAddress') as FormControl;
+  }
   onSubmit()
   {
       console.warn(this.profileForm.value);
-      this.user=Object.assign(this.user,this.profileForm.value);
-      this.userService.addUser(this.user);
+      this.isSubmitted=true;
+      if(this.profileForm.valid)
+      {
+      this.userArray=Object.assign(this.userArray,this.profileForm.value);
+      this.userService.addUser(this.userArray);
+      this.isSubmitted=false;
+      }
   }
 }
 imports: [
