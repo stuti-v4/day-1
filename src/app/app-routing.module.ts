@@ -5,6 +5,7 @@ import { ShowuserComponent } from './showuser/showuser.component';
 import { UseraddComponent } from './useradd/useradd.component';
 
 const routes: Routes=[
+  { path: '',   redirectTo: '/home', pathMatch: 'full' },
   {
     path: 'home',
     component:HomeComponent
