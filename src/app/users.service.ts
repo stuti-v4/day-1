@@ -1,22 +1,18 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
+import { FormGroup } from "@angular/forms";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class UsersService {
-
-  constructor() { }
-  addUser(userArray)
-  {
-    let users=[];
-    if(localStorage.getItem('Users'))
-    {
-      users=JSON.parse(localStorage.getItem('Users'));
-      users=[userArray, ...users];
+ 
+  private Details:any[] = [];
+ 
+    addUser(details: FormGroup) {
+        this.Details.push(details);
     }
-    else{
-      users=[userArray];
+ 
+    getUser() {
+        return this.Details;
     }
-    localStorage.setItem('Users',JSON.stringify(users));
-  }
 }
