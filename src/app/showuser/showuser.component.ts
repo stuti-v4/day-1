@@ -8,7 +8,7 @@ import { UsersService } from "../users.service";
 })
 export class ShowuserComponent implements OnInit 
 {
-  userDetails=[];
+  userDetails:any[] = [];
   constructor(private userService: UsersService) 
   {
     this.userDetails= userService.getUser();

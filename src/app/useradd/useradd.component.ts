@@ -48,7 +48,7 @@ export class UseraddComponent implements OnInit {
     console.warn(this.profileForm.value);
     this.isSubmitted = true;
     if (this.profileForm.valid) {
-      this.userService.addUser(this.profileForm);
+      this.userService.addUser(this.profileForm.value);
       this.isSubmitted = false;
     }
   }
