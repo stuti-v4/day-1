@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
+import { convertDirectiveMetadataToExpression } from '@angular/core/schematics/migrations/undecorated-classes-with-di/decorator_rewrite/convert_directive_metadata';
 import { Routes, RouterModule } from '@angular/router';
+import { CovidmeterComponent } from './covidmeter/covidmeter.component';
 import { HomeComponent } from './home/home.component';
 import { ShowuserComponent } from './showuser/showuser.component';
 import { UseraddComponent } from './useradd/useradd.component';
+
 
 const routes: Routes=[
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
@@ -15,9 +18,14 @@ const routes: Routes=[
     component:UseraddComponent
   },
   {
+     path:'covidmeter',
+     component:CovidmeterComponent
+  },
+  {
     path:'showuser',
     component:ShowuserComponent
   }
+  
 ];
 
 @NgModule({
@@ -26,4 +34,4 @@ const routes: Routes=[
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [HomeComponent,UseraddComponent,ShowuserComponent];
+export const routingComponents = [HomeComponent,UseraddComponent,ShowuserComponent,CovidmeterComponent];
