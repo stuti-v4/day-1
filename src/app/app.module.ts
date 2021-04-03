@@ -8,13 +8,14 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { HomeComponent } from './home/home.component';
 import { UseraddComponent } from './useradd/useradd.component';
-import { ShowuserComponent } from './showuser/showuser.component';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { UsersService } from './users.service';
+import { ShowuserComponent } from './showuser/showuser.component';
+
 
 @NgModule({
-  imports:[ BrowserModule, FormsModule, AppRoutingModule,  FormsModule, ReactiveFormsModule],
-  declarations: [ AppComponent, HelloComponent, HomeComponent, UseraddComponent,routingComponents ],
+  imports:[ BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule],
+  declarations: [ AppComponent, HelloComponent, HomeComponent, UseraddComponent,routingComponents,ShowuserComponent],
   providers: [UsersService],
   bootstrap: [ AppComponent ]
 })
