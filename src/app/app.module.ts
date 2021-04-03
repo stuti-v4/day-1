@@ -11,11 +11,12 @@ import { UseraddComponent } from './useradd/useradd.component';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { UsersService } from './users.service';
 import { ShowuserComponent } from './showuser/showuser.component';
+import { CovidmeterComponent } from './covidmeter/covidmeter.component';
 
 
 @NgModule({
   imports:[ BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule],
-  declarations: [ AppComponent, HelloComponent, HomeComponent, UseraddComponent,routingComponents,ShowuserComponent],
+  declarations: [ AppComponent, HelloComponent, HomeComponent, UseraddComponent,routingComponents,ShowuserComponent, CovidmeterComponent],
   providers: [UsersService],
   bootstrap: [ AppComponent ]
 })
