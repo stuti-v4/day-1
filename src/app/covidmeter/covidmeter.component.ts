@@ -7,15 +7,17 @@ import { UsersService } from "../users.service";
   styleUrls: ['./covidmeter.component.css']
 })
 export class CovidmeterComponent implements OnInit {
-  totalData:any=[];
+  data:any;
   constructor( private user:UsersService) 
   { 
-    this.user.getTotalData().subscribe(data=>{
-      console.warn(data)
-      this.totalData=data
-    })
+  
   }
 
   ngOnInit(): void 
-  {}
+  {
+    this.user.getTotalData().subscribe((result)=>{
+      console.warn("result",result )
+      this.data=result
+    })
+  }
 }

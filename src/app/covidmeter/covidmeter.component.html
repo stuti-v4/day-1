@@ -254,12 +254,31 @@
         </div>
       <div class="line">
     <ul>
-      <div class="new" *ngFor="let item of totalData">
-       <li>{{item.TotalConfirmed}}<li>
-       <li>{{item.TotalDeaths}}</li>
-       <li>{{item.TotalRecovered}}</li>
+      <div class="new">
+       <li><span class="dot1"></span> {{data.TotalConfirmed}}</li>
+       <li><span class="dot2"></span> {{data.TotalDeaths}}</li>
+       <li><span class="dot3"></span> {{data.TotalRecovered}}</li>
       </div>
     </ul>
 </div>
       </div>
-</div>  
+</div> 
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Total Cases</th>
+      <th scope="col">Active</th>
+      <th scope="col">Recovered</th>
+      <th scope="col">Deaths</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
