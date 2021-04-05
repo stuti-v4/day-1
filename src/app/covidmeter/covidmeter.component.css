@@ -40,3 +40,7 @@ ul .new li
   border-radius: 50%;
   display: inline-block;
 }
+.table-dark
+{
+  color: black;
+}
