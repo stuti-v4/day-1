@@ -2,7 +2,7 @@
 <div class="container">
       <div class="row cmCss">
         <label for="country"> <strong>Country</strong></label>
-        <div class="col-sm-10">
+        <div class="options">
           <select id="country" name="country">
    <option value="Afganistan">Afghanistan</option>
    <option value="Albania">Albania</option>
@@ -252,8 +252,14 @@
    <option value="Zimbabwe">Zimbabwe</option>
 </select>
         </div>
-      <div>
-        total
+      <div class="line">
+    <ul>
+      <div class="new" *ngFor="let item of totalData">
+       <li>{{item.TotalConfirmed}}<li>
+       <li>{{item.TotalDeaths}}</li>
+       <li>{{item.TotalRecovered}}</li>
       </div>
+    </ul>
+</div>
       </div>
 </div>  

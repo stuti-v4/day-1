@@ -40,6 +40,7 @@ ul{
   align-items: center;
   justify-content: center; 
 }
+
 ul .new
 {
   display: inline-flex;
@@ -47,10 +48,13 @@ ul .new
   margin-right: 10px;
   flex: 1;
 }
-ul .new li
+
+ul .new li a
 {
   padding: 0 12px;
+  color: white;
 }
+
 ul li.logo
 {
   display: inline-flex;
