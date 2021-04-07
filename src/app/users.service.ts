@@ -16,6 +16,11 @@ export class UsersService {
  {
  }
 
+ getCountries():Observable<any>
+ {
+   const url="https://api.covid19api.com/countries";
+   return this.http.get<any>(url)
+ }
  getTotalData()
  {
    return this.http.get(this.totalCaseUrl);
