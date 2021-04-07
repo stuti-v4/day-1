@@ -10,8 +10,8 @@ export class CovidmeterComponent implements OnInit
 {
   totalData:any;
   countries:any;
-   selectedCountry:any;
-   countryData:any;
+  selectedCountry:any;
+  countryData:any;
   constructor( private user:UsersService) { }
 
   ngOnInit(): void 

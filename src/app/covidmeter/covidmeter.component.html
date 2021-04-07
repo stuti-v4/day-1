@@ -4,7 +4,7 @@
         <label for="country"> <strong>Country</strong></label>
         <div>
           <select id="country" (click)="getCountry($event)">
-            <option *ngFor="let country of countries" selected [value]="country.Slug" >
+            <option *ngFor="let country of countries" [value]="country.Slug" >
               {{country.Country}}
             </option >
           </select>

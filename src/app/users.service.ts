@@ -13,9 +13,7 @@ export class UsersService {
  url="https://api.covid19api.com/countries";
  public selectCountry= "";
 
- constructor( private http:HttpClient)
- {
- }
+ constructor( private http:HttpClient){}
 
  getCountries():Observable<any>
  {
