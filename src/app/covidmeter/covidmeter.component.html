@@ -35,12 +35,12 @@
     </tr>
   </thead>
   <tbody>
-   <tr *ngFor="let data of countryData;">
-        <td>{{data.Date | date:'dd/MM/yyyy'}}</td>
-        <td>{{data.Confirmed}}</td>
-        <td>{{data.Active}}</td>
-        <td>{{data.Recovered}}</td>
-        <td>{{data.Deaths}}</td>
+   <tr *ngFor="let cases of countryData;">
+        <td>{{cases.Date | date:'dd/MM/yyyy'}}</td>
+        <td>{{cases.Confirmed}}</td>
+        <td>{{cases.Active}}</td>
+        <td>{{cases.Recovered}}</td>
+        <td>{{cases.Deaths}}</td>
       </tr>
   </tbody>
 </table>
