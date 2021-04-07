@@ -3,7 +3,7 @@
       <div class="row cmCss">
         <label for="country"> <strong>Country</strong></label>
         <div>
-          <select id="country" (click)="getCountry($event)">
+          <select class="options" id="country" (click)="getCountry($event)">
             <option *ngFor="let country of countries" [value]="country.Slug" >
               {{country.Country}}
             </option >
