@@ -3,7 +3,7 @@
       <div class="row cmCss">
         <label> <strong>Country</strong></label>
         <div>
-          <select>
+          <select (click)=getCountry($event.target)>
             <option *ngFor="let country of countries" value={{country.Slug}} >
               {{country.Country}}
             </option >
@@ -33,6 +33,8 @@
   </thead>
   <tbody>
     <tr>
+      <td></td>
+      <td></td>
       <td></td>
       <td></td>
       <td></td>
