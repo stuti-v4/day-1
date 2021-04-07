@@ -40,6 +40,14 @@ ul .new li
   border-radius: 50%;
   display: inline-block;
 }
+
+.custom-table{
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
 .table-dark
 {
   color: black;

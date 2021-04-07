@@ -9,7 +9,8 @@ import { Observable } from "rxjs";
 export class UsersService {
  
  totalCaseUrl="https://api.covid19api.com/world/total";
- private casesUrl='';
+ covidCaseUrl='https://api.covid19api.com/country/';
+ url="https://api.covid19api.com/countries";
  public selectCountry= "";
 
  constructor( private http:HttpClient)
@@ -18,12 +19,19 @@ export class UsersService {
 
  getCountries():Observable<any>
  {
-   const url="https://api.covid19api.com/countries";
-   return this.http.get<any>(url)
+   return this.http.get<any>(this.url)
  }
  getTotalData()
  {
    return this.http.get(this.totalCaseUrl);
+ }
+  getCountryDataUrl()
+  {
+    return this.http.get(this.covidCaseUrl);
+  }
+ getCountryData(country:string)
+ {
+    this.covidCaseUrl='https://api.covid19api.com/country/'+ country;
  }
   private Details:any[] = [];
  
